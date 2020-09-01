@@ -210,16 +210,16 @@ defmodule MathLogicTest do
   end
 
   test "ceil" do
-    {:ok, %Record{data: data}} = ceil(0.3) |> run
+    {:ok, %Record{data: data}} = RethinkDB.Query.ceil(0.3) |> run
     assert data == 1
-    {:ok, %Record{data: data}} = ceil(0.6) |> run
+    {:ok, %Record{data: data}} = RethinkDB.Query.ceil(0.6) |> run
     assert data == 1
   end
 
   test "floor" do
-    {:ok, %Record{data: data}} = floor(0.3) |> run
+    {:ok, %Record{data: data}} = RethinkDB.Query.floor(0.3) |> run
     assert data == 0
-    {:ok, %Record{data: data}} = floor(0.6) |> run
+    {:ok, %Record{data: data}} = RethinkDB.Query.floor(0.6) |> run
     assert data == 0
   end
 end

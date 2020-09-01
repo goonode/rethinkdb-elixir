@@ -147,7 +147,7 @@ defmodule RethinkDB.Query.Macros do
 
     wrap(%{
       "$reql_type$" => "TIME",
-      "epoch_time" => DateTime.to_unix(t, :milliseconds) / 1000,
+      "epoch_time" => DateTime.to_unix(t, :millisecond) / 1000,
       "timezone" => time_zone
     })
   end
